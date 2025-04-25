@@ -1,56 +1,52 @@
-# Electric Vehicle Charging Station Location Analysis - DSA210 Project
+# Service and Charging Type Analysis at EV Charging Stations - DSA210 Project
 
-## **Project Overview**
-This project aims to analyze the locations of electric vehicle (EV) charging stations to evaluate their proximity to highways, high-traffic areas (shopping malls, business centers, etc.), and operational hours.
-
-By performing **geospatial data analysis**, this study will provide data-driven recommendations for optimizing station placement. Additionally, it will investigate how operational hours impact station usage.
+## **Project Description**
+This project aims to analyze whether the services offered at electric vehicle (EV) charging stations (such as parking, restaurants, Wi-Fi) are associated with the station's charging type – fast (DC) or slow (AC).  
+Using real-world data, the study will investigate the impact of service variety on charging type through data science methods.
 
 ## **Objectives**
-- **Location Analysis:** Assess the proximity of charging stations to **highways, city centers, malls, and business districts.**  
-- **Accessibility Evaluation:** Measure ease of access to stations and suggest optimal locations.  
-- **Operational Hours Impact:** Analyze the difference in usage between **24-hour stations** and those with restricted operating hours.  
-- **Applying Data Science Techniques:** Utilize Python for data processing, analysis, and visualization.  
+- **Charging Type Analysis:** Determine the distribution of fast (DC) and slow (AC) charging stations.  
+- **Service Analysis:** Analyze the types and frequencies of services offered at charging stations.  
+- **Relationship Examination:** Test the relationship between available services and charging type (AC/DC).  
+- **Data Science Application:** Apply data cleaning, exploratory analysis, hypothesis testing, and visualization using Python.
 
 ## **Motivation**
-With the increasing adoption of EVs, strategically placing charging stations is crucial. This project will use **data science techniques** to analyze and optimize station locations for maximum efficiency.
-
-- **Urban Planning Contribution** – Identify optimal station locations near residential areas and highways.  
-- **Improved Driver Experience** – Help EV drivers find the most convenient charging locations.  
-- **Business Efficiency** – Understand how operational hours impact station utilization to provide recommendations for operators.  
+Charging speed and additional services are critical factors for EV drivers when choosing a charging station.  
+This project aims to provide data-driven insights to inform future station planning and infrastructure development.
 
 ## **Dataset**
-The dataset will include:
-- **Public APIs:** Charging station locations, working hours, and service details.  
-- **Web Scraping:** Extracting location data from map-based platforms.  
-- **Additional Data Sources:** Traffic congestion and population density datasets for richer insights.  
-
-Key variables include **station name, coordinates (latitude/longitude), operational hours, and distance to highways.**
+The dataset includes information about EV charging stations in Turkey, such as:
+- Name
+- Coordinates (latitude/longitude)
+- Charging type (AC/DC)
+- Available services (parking, restaurants, Wi-Fi, shopping, etc.)
+- Operational hours
+- Current status (active, under maintenance, planned)
 
 ## **Tools and Technologies**
-- **Python** – Core programming language for data analysis.  
-- **Pandas & Geopandas** – Data cleaning and geospatial analysis.  
-- **Folium & Matplotlib** – Visualizing station distributions on maps.  
-- **Scikit-Learn** – Clustering algorithms (K-Means) to optimize station placement.  
+- **Python** – Core language for data processing and analysis  
+- **Pandas** – Data manipulation  
+- **Matplotlib & Seaborn** – Data visualization  
+- **SciPy** – Hypothesis testing (Chi-square test)  
+- **Jupyter Notebook** – Documentation and analysis
 
 ## **Analysis Plan**
-### **1. Data Collection and Preparation**
-- Collect a dataset containing charging station locations and operational hours.  
-- Retrieve data via APIs or web scraping and clean the dataset.  
+1. **Data Collection and Cleaning:**  
+   - Extract and process relevant fields from the dataset.json file.
 
-### **2. Geospatial Analysis and Mapping**
-- **Visualizing on Maps:** Use Folium to display the distribution of stations across urban areas.  
-- **Highway Proximity Analysis:** Calculate the distance of charging stations from major highways.  
+2. **EDA (Exploratory Data Analysis):**  
+   - Analyze the distribution of fast (DC) and slow (AC) charging stations.
+   - Visualize the frequency of services across different charging types.
 
-### **3. Usage vs. Operational Hours**
-- Compare usage patterns between **24-hour stations and limited-hour stations.**  
-- Analyze the effect of operational hours on station occupancy.  
+3. **Hypothesis Testing:**  
+   - Perform chi-square tests to assess the association between services and charging types.
 
-### **4. Optimization and Recommendations**
-- Use clustering algorithms (K-Means) to identify **optimal locations for new stations.**  
+4. **Conclusions and Interpretations:**  
+   - Identify which services are more critical for fast charging stations.
 
 ## **Expected Outcomes**
-- **A heatmap showing the proximity of charging stations to highways and business centers.**  
-- **Graphs demonstrating the impact of operational hours on station usage.**  
-- **Clustered recommendations for new charging station placements.**  
+- Comparative analysis between fast and slow charging stations based on services offered
+- Statistical relationship assessment between services and charging types
+- Visualizations: bar charts, heatmaps, etc.
 
-This project aims to provide **data-driven recommendations** for urban planners and EV charging station operators to improve accessibility and efficiency.
+This project aims to produce data-driven strategies for the improvement of EV charging station infrastructures.
